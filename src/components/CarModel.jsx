@@ -4,11 +4,11 @@ import { gsap, Power2, Power4 } from "gsap";
 import { useRef } from "react";
 import { useEffect, useState } from "react";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import * as dat from "dat.gui";
+// import * as dat from "dat.gui";
 import { useDispatch, useSelector } from "react-redux";
 import { animatingActions } from "../store/AnimatingSlice";
 
-const gui = new dat.GUI();
+// const gui = new dat.GUI();
 // dat.GUI.toggleHide();
 
 let camera = null;
@@ -24,6 +24,9 @@ let carPosition = {
   y: -3,
   z: 0,
 };
+// gui.add(carPosition, "x", -5, 5, 0.1).name("car x position");
+// gui.add(carPosition, "y", -5, 5, 0.1).name("car y position");
+// gui.add(carPosition, "z", -5, 5, 0.1).name("car z position");
 
 let centerLightPosition = {
   x: 0,
@@ -34,9 +37,6 @@ let centerLightPosition = {
 let centerLightIntensity = {
   intensity: 0,
 };
-// gui.add(carPosition, "x", -5, 5, 0.1).name("car x position");
-// gui.add(carPosition, "y", -5, 5, 0.1).name("car y position");
-// gui.add(carPosition, "z", -5, 5, 0.1).name("car z position");
 
 let carRotation = {
   x: 0.2,
@@ -65,7 +65,6 @@ let backLightIntensity = {
 };
 
 // gui.add(backLightIntensity, 'intensity', 0, 1, 0.1).name('back light intensity');
-
 // gui.add(backLightPosition, 'x', -5, 5, 0.1).name('backLight x position');
 // gui.add(backLightPosition, 'y', -5, 5, 0.1).name('backLight y position');
 // gui.add(backLightPosition, 'z', -5, 5, 0.1).name('backLight z position');

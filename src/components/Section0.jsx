@@ -5,21 +5,20 @@ export default function Section0() {
   const sectionVariants = {
     hidden: {
       x: '-100vw',
-      transition: {
-        staggerChildren: 0.2,
-      },
     },
     visible: {
       x: 0,
       transition: {
         staggerChildren: 0.2,
+    delayChildren: 0.5,
+    ease: "linear",
       },
     },
   };
 
   const boxVariants = {
     hidden: {
-      y: 100,
+      y: 50,
       opacity: 0,
     },
     visible: {
@@ -39,9 +38,9 @@ export default function Section0() {
       animate="visible"
       exit="hidden"
     >
-      <motion.div className="section__content" variants={boxVariants} key="1">
+      <motion.div className="section__content" key="1">
         <p className="section__text">
-          Introducing our sleek and stylish car, designed to take your driving
+          Introducing our sleek and stylish THUNDERBOLT-GT, designed to take your driving
           experience to the next level. With its powerful engine and smooth
           handling, you'll feel the rush of excitement every time you get behind
           the wheel. Our car is packed with advanced features to make your
@@ -49,18 +48,18 @@ export default function Section0() {
         </p>
         <table>
           <tbody>
-            <tr>
+            <motion.tr variants={boxVariants} >
               <td>Front luggage compartment volume</td>
               <td>5.2 ft³</td>
-            </tr>
-            <tr>
+            </motion.tr >
+            <motion.tr variants={boxVariants}>
               <td>Rear luggage compartment volume</td>
               <td>9.7 ft³</td>
-            </tr>
-            <tr>
+            </motion.tr>
+            <motion.tr variants={boxVariants}>
               <td>Fuel tank</td>
               <td>14.2 gal</td>
-            </tr>
+            </motion.tr>
           </tbody>
         </table>
       </motion.div>
