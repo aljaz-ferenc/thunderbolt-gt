@@ -1,0 +1,45 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100vh;
+}
+.hero h1 {
+  color: rgb(255, 104, 3);
+  font-family: "Anton", sans-serif;
+  font-size: 10rem;
+  font-style: italic;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  width: fit-content;
+  z-index: 0;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  -webkit-box-reflect:below 0px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.2));
+}
+
+.hero h1::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 120%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(255, 104, 3);
+}
+
+.hero > div {
+  height: 100%;
+  z-index: 1;
+  width: 100vw;
+}
+.hero > div:nth-child(2) {
+  height: 300%;
+}
+
+
