@@ -117,7 +117,7 @@ export default function CarModel() {
 
     let car;
     const gltfLoader = new GLTFLoader();
-    gltfLoader.load("./src/model-car2/scene.gltf", (gltf) => {
+    gltfLoader.load("./model-car2/scene.gltf", (gltf) => {
       car = gltf.scene;
       car.position.set(carPosition.x, carPosition.y, carPosition.z);
       car.scale.set(0.5, 0.5, 0.5);
